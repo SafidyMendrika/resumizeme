@@ -2,7 +2,7 @@
 // import styles from "./page.module.css";
 
 
-export default function Home({ searchParams }: { searchParams: { tab?: string }}){
+export default function Home(){
     return (
      <main className="" >
         
