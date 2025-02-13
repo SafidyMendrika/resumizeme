@@ -1,0 +1,15 @@
+.button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #e5e5e5;
+    transition: 400ms;
+}
