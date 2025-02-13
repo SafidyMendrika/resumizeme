@@ -1,0 +1,23 @@
+.header{
+    display:  flex;
+    gap:  5px;
+    font-family: var(--font-gilroy-bold);
+    font-size: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.aside{
+    max-width: 200px;
+    padding: 5px;
+    border-right: 2px rgb(203, 203, 203) solid;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+}
+
+.btnlink{
+    font-weight: 600;
+    font-size: 16px;
+}
