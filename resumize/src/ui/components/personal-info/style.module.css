@@ -1,0 +1,72 @@
+.section{
+    margin-top: 50px;
+
+
+}
+
+.twoCol, .oneCol{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    height: 56px;
+    margin-top: 10px;
+}
+.twoCol > div{
+    width : 46%;
+}
+.oneCol > div{
+    width : 100%;
+}
+.mainElement{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.inputContainer{
+    width: 70%;
+}
+
+.image{
+    width: 144px;
+    height: 144px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.longText{
+    font-size: 15px;
+    color: #4C4C55;
+}
+.longText > span , .checkText>span{
+    color: #1688FE;
+}
+
+.saveBtn{
+    width: 170px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    font-size: 15;
+    font-weight: 700;
+    color: #fff;
+    background-color: #1688FE;
+    transition: 200ms;
+    cursor: pointer;
+}
+.saveBtn:hover{
+    background-color: #0671e3;
+}
+
+.checkText{
+    margin-top: 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.checkText > input{
+    border:2px #C4C4C7 solid;
+    width: 16px;
+    height: 16px;
+}

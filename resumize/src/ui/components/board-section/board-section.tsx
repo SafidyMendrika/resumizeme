@@ -1,16 +1,23 @@
+"use client"
+
 import styles from "./style.module.css"
 import { BoardModel } from "@/model/board.model"
 import { BoardElement } from "../board-element/board-element"
+import { useState } from "react"
 
 export function BoardSection(){
-    const boards : BoardModel[] = [
+    const [boards ,setBoard]  = useState([
         {label : "Board 1",isPrivate : false},
         {label : "Board 2",isPrivate : false},
         {label : "Board 3",isPrivate : false},
         {label : "Board agent 1",isPrivate : true},
         {label : "Board agent 2",isPrivate : true},
         {label : "Board agent 3",isPrivate : true},
-    ]
+    ])
+
+    const addBoard = ()=>{
+        setBoard([...boards,{label : "New Board "+boards.length,isPrivate : true}])
+    }
     return (
         <section className={styles.section} >
             <div className={styles.title}>
@@ -22,7 +29,7 @@ export function BoardSection(){
                     <p>My boards</p>
                 </div>
 
-                <button className={styles.titleBtn} >
+                <button className={styles.titleBtn} onClick={addBoard}>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="#C4C4C7"/>
                         <path d="M9 7V4H7L7 7H4V9H7L7 12H9V9H12V7H9Z" fill="#A1A1A5"/>

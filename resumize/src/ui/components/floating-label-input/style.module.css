@@ -1,0 +1,44 @@
+.floatingLabelGroup {
+    position: relative;
+    width: 100%;
+}
+
+.floatingInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 13px;
+    transition: 0.3s;
+
+    color: #14141F;
+}
+
+.floatingLabel {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #777;
+    pointer-events: none;
+    transition: 0.3s;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.floatingInput:focus + .floatingLabel,
+.filled {
+    top: 0px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+.emailCheck{
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}

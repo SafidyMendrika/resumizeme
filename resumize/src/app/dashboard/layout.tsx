@@ -26,7 +26,9 @@ export default function RootLayout({
     <html lang="en">      
       <body className={`${gilroy.variable} ${gilroyBold.variable}`}>
         <AsideBar />
-        {children}
+        <main style={{paddingLeft : "240px"}} >
+          {children}
+        </main>
       </body>
     </html>
   );

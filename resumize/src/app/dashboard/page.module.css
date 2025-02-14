@@ -1,0 +1,49 @@
+.main{
+    padding: 50px 120px;
+    position: relative;
+}
+
+.deleteContainer{
+    width: 100%;
+    padding: 16px;
+    border: 1px #E3E3E4 solid;
+    border-radius: 8px;
+}
+.deleteContainer > p{
+    font-size: 16px;
+    color: #4C4C55;
+}
+
+.deleteContainer > h3{
+    font-size: 17px;
+}
+
+.deleteBtn {
+    color: #F25773;
+    font-weight: 700;
+    cursor: pointer;
+}
+.deleteBtn:hover{
+    text-decoration: underline #F25773;
+}
+
+.longText{
+    font-size: 15px;
+    color: #4C4C55;
+}
+.longText > span , .checkText>span{
+    color: #1688FE;
+}
+
+.footer{
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footerTerms > *{
+    padding: 5px 10px;
+    margin: 10px;
+    color: #595964;
+    text-decoration: none;
+}

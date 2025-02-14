@@ -9,6 +9,7 @@
     font-weight: 800;
     color: #3A3A43;
     height: 48px;
+    
 }
 
 .aside{
@@ -64,7 +65,7 @@
 
 .footer{
     margin-top: 20px;
-    position: absolute;
+    bottom: 0px;
     display: flex;
     align-items: center;
     gap: 2px;
@@ -89,4 +90,19 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.footer {
+    margin: 20px 0px; 
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 64px;
+    width: 100%;
 }
