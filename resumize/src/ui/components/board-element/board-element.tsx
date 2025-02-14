@@ -1,20 +1,30 @@
+import { useState } from "react";
 import styles from "./style.module.css"
 import { BoardModel } from "@/model/board.model";
 
 
 interface LinkButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  element : BoardModel
+  element : BoardModel,
+  updateBoardLabel: (newLabel: string) => void; 
 }
 
 
 export function BoardElement({
   
-  element
+  element,
+  updateBoardLabel 
 }: LinkButtonProps) {
 
-  
+    const [changeName,setChangeName] = useState(false);
+
+    const toggleChangeName = ()=>{
+      setChangeName(!changeName);
+    }
+    const handleChange = ( e: React.ChangeEvent<HTMLInputElement>)=>{
+      updateBoardLabel(e.target.value);
+    }
     return (
-        <div className={styles.element}>
+        <div className={styles.element} onDoubleClick={toggleChangeName}>
             {element.isPrivate && (
               <span className={styles.icon} >🔒</span>
             )}
@@ -22,7 +32,13 @@ export function BoardElement({
               <span className={styles.icon} >🗂️</span>
            
             )}
-            <p className={styles.label}>{element.label}</p>
+            {changeName && (
+              <input type="text" value={element.label} autoFocus onBlur={toggleChangeName} onChange={handleChange}/>
+            )}
+            {!changeName && (
+              <p className={styles.label}>{element.label}</p>
+            )}
+            
         </div>
     )
 }
