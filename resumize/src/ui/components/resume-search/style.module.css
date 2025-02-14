@@ -1,0 +1,25 @@
+.star{
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
+}
+
+.element{
+    width: 100%;
+    display: flex;
+    padding: 2px 4px;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    height: 32px;
+    border-radius: 10px;
+    transition: 200ms;
+    font-size: 13px;
+    cursor: pointer;
+}
+.element:hover{
+    background: #e6e6e6;
+}
+.label{
+    margin: 0;
+}

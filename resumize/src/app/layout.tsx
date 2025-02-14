@@ -23,7 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en">      
+    <head>
+      <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    </head>
+
       <body className={`${gilroy.variable} ${gilroyBold.variable}`}>
         {children}
       </body>
