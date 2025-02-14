@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resumizeme
 
-## Getting Started
+Resumizeme is a personal project designed to test my skills in **React** and **Next.js**. The project is inspired by the real website [resumiezme.io](https://resumiezme.io) and replicates its proportions and typography based on the Figma design.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🔍 **Search above past searches**
+- ➕ **Add a new board**
+- ✏ **Rename a board by double-clicking it**
+- 📝 **Change personal information**
+- 💾 **Save personal information in localStorage**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** (React Framework)
+- **TypeScript** (for type safety)
+- **pure CSS/Styled Components** (for styling)
+- **LocalStorage** (for saving data locally)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup & Installation
 
-## Learn More
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/SafidyMendrika/resumizeme.git
+   cd resumizeme
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+   ```sh
+   npm run dev
+   ```
+   The app will be available at [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- The project is optimized for **client-side rendering** to handle localStorage operations without SSR errors.
+- The **board management system** allows users to add, rename, and organize boards dynamically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is for learning purposes and is not intended for commercial use.
+
+---
+Made with ❤️ while exploring React & Next.js!
+
