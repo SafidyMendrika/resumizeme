@@ -24,3 +24,9 @@
 .label{
     margin: 0;
 }
+.element > input{
+    outline: 1px gray;
+    border: 1px gray solid;
+    padding: 2px 4px;
+    border-radius: 3px;
+}

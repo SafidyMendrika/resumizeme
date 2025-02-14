@@ -1,7 +1,6 @@
 "use client"
 
 import styles from "./style.module.css"
-import { BoardModel } from "@/model/board.model"
 import { BoardElement } from "../board-element/board-element"
 import { useState } from "react"
 
@@ -18,6 +17,13 @@ export function BoardSection(){
     const addBoard = ()=>{
         setBoard([...boards,{label : "New Board "+boards.length,isPrivate : true}])
     }
+
+    const updateBoardLabel = (index: number, newLabel: string) => {
+        const updatedBoards = boards.map((board, idx) =>
+          idx === index ? { ...board, label: newLabel } : board
+        );
+        setBoard(updatedBoards);
+      };
     return (
         <section className={styles.section} >
             <div className={styles.title}>
@@ -39,7 +45,8 @@ export function BoardSection(){
             </div>
 
             {boards.map((element,index) =>(
-                <BoardElement element={element} key={index} />
+                <BoardElement element={element} key={index} 
+                updateBoardLabel={(newLabel) => updateBoardLabel(index, newLabel)}/>
             ))}
             
         </section>

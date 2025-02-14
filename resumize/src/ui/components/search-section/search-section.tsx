@@ -1,9 +1,12 @@
+"use client"
+
 import { SearchModel } from "@/model/search.model"
 import styles from "./style.module.css"
 import { ResumeSearch } from "../resume-search/resume-search"
+import { useState } from "react"
 
 export function SearchSection(){
-    const result : SearchModel[] = [
+    const defaultResult : SearchModel[] = [
         {label : "Software Engineer",type : "new"},
         {label : "Computer hardware engineer",type : "new"},
         {label : "Network Engineer",type : "new"},
@@ -19,6 +22,19 @@ export function SearchSection(){
         {label : "Computer security",type : "old"},
         {label : "Computer Systems Analyst",type : "old"},
     ]
+
+    const [result,setResult] = useState(defaultResult)
+
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const searchTerm = e.target.value.toLowerCase()
+        
+        const filteredResults = defaultResult.filter(element => 
+            element.label.toLowerCase().includes(searchTerm)
+        )
+
+        setResult(filteredResults)
+    }
+    
     return (
         <section >
             <div className={styles.searchBar}>
@@ -36,7 +52,7 @@ export function SearchSection(){
                 </button>
 
 
-                <input type="text" placeholder="Search" className={styles.searchInput} />
+                <input type="text" placeholder="Search" className={styles.searchInput} onChange={handleSearch} />
             </div>
 
             {result.map((element,index) =>(
