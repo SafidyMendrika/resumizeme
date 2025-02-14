@@ -1,13 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import { FloatingLabelInput } from "../floating-label-input/floating-label-input";
 import Image from "next/image";
 
 export function PersonalInfo() {
-  const savedFormData = window.localStorage.getItem("formData");
-  const initialFormData = savedFormData ? JSON.parse(savedFormData) : {
+  const [formData, setFormData] = useState({
     firstName: "Petter",
     lastName: "Cetera",
     city: "London",
@@ -16,10 +15,16 @@ export function PersonalInfo() {
     email: "petter@gmail.com",
     phone: "+442223334444",
     password: "Password",
-  };
+  });
 
-  const [formData, setFormData] = useState(initialFormData);
   const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    const savedFormData = window.localStorage.getItem("formData");
+    if (savedFormData) {
+      setFormData(JSON.parse(savedFormData));
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
