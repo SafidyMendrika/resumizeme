@@ -1,23 +1,92 @@
 .header{
     display:  flex;
     gap:  5px;
-    font-family: var(--font-gilroy-bold);
-    font-size: 20px;
+    font-family: var(--font-gilroy);
+    font-size: 14px;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    font-weight: 800;
+    color: #3A3A43;
+    height: 48px;
 }
 
 .aside{
-    max-width: 200px;
+    max-width: 240px;
+    max-height: 100vh;
     padding: 5px;
     border-right: 2px rgb(203, 203, 203) solid;
     height: 100vh;
-    position: sticky;
     top: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    
+    scroll-behavior: smooth;
+    
 }
 
 .btnlink{
-    font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
+}
+
+
+
+
+
+.aside::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px;
+}
+
+.aside::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1; 
+    border-radius: 10px;
+    border: 2px solid #cdcdcd; 
+
+}
+
+.aside::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    display: none;
+}
+
+.aside::-webkit-scrollbar-thumb:hover {
+    background-color: #cdcdcd; 
+}
+
+.aside {
+    scrollbar-width: thin; 
+    scrollbar-color: #cdcdcd #f1f1f1;   
+}
+
+.footer{
+    margin-top: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 64px;
+    width: 100%;
+}
+
+.footerLabel{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 80%;
+    font-size: 13px;
+}
+
+.footerImage{
+    border-radius: 100%;
+}
+
+.paramButton{
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }

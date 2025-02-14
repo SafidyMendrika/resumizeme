@@ -6,4 +6,9 @@
 body {
   font-family: var(--font-gilroy), sans-serif;
   font-weight: 300;
+  color: #14141F;
+}
+
+::placeholder{
+  color: #14141F;
 }

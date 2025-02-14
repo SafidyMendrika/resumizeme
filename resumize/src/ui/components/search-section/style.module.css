@@ -1,0 +1,34 @@
+.searchBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+}
+
+.searchInput{
+    height: 100%;
+    width: 100%;
+    padding: 5px 5px;
+    border: none;
+    outline: 1px #3A3A43 ;
+    border-radius: 7px;
+}
+
+.searchBtn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 2px ;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.searchBtn:hover{
+    background: #dcdcdc;
+}
